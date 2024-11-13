@@ -11,6 +11,12 @@ return {
     },
   },
 
+  {
+    rocks = {
+      hererocks = true,
+    },
+  },
+
   performance = {
     rtp = {
       disabled_plugins = {
