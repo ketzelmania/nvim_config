@@ -13,6 +13,12 @@ return {
     --event = "BufEnter",
   },
 
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+
+  { "KeitaNakamura/tex-conceal.vim", event = "VeryLazy" },
+
+  { "ixru/nvim-markdown", event = "BufEnter" },
+
   {
     "3rd/image.nvim",
     event = "BufEnter",

@@ -12,3 +12,5 @@ vim.opt.softtabstop = 4 -- What you expecting
 vim.opt.shiftwidth = 4 -- What you expecting
 vim.opt.expandtab = true -- Works without this
 vim.opt.conceallevel = 2
+vim.g.vim_markdown_folding_disabled = 1
+vim.g.vim_markdown_math = 1
