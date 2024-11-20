@@ -15,9 +15,21 @@ return {
 
   { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 
-  { "KeitaNakamura/tex-conceal.vim", event = "VeryLazy" },
+  { "KeitaNakamura/tex-conceal.vim", lazy = false, ft = "markdown" },
 
-  { "ixru/nvim-markdown", event = "BufEnter" },
+  { "tadmccorkle/markdown.nvim", lazy = true, ft = "markdown" },
+
+  { "mpas/marp-nvim", lazy = true, ft = "markdown" },
+
+  {
+    "brianhuster/live-preview.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    },
+    opts = {},
+    lazy = true,
+    ft = "html",
+  },
 
   {
     "3rd/image.nvim",

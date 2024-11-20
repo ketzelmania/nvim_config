@@ -13,7 +13,7 @@ return {
       javascriptreact = { "eslint_d" },
       typescriptreact = { "eslint_d" },
       svelte = { "eslint_d" },
-      python = { "pylint" }, -- overlap with lsp
+      python = { "ruff" }, -- overlap with lsp
       latex = { "vale" },
     }
 
