@@ -1,7 +1,7 @@
 local adapters = { "python" } --list your adapters here
 
 for _, adapter in ipairs(adapters) do
-  require("custom.plugins.dap_configs." .. adapter)
+  require("config.dap_configs." .. adapter)
 end
 
 local function dap_mappings()
@@ -48,3 +48,4 @@ dap_mappings()
 -- end
 --
 -- return M
+
