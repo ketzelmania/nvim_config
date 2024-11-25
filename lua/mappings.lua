@@ -1,21 +1,38 @@
+-- general
 vim.keymap.set("i", "jk", "<ESC>")
-vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
-vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
+vim.keymap.set("n", "<esc>", ":noh<return><esc>")
+
+-- remap registers
 vim.keymap.set("n", "d", '"_d')
 vim.keymap.set("n", "x", '"_x')
+vim.keymap.set("n", "c", '"_c')
+
+vim.keymap.set("v", "d", '"+d')
+vim.keymap.set("v", "x", '"+x')
+vim.keymap.set("v", "c", '"+c')
+
+vim.keymap.set({ "n", "v" }, "y", '"+y')
+vim.keymap.set("n", "p", '"+p')
+
+-- switch windows
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
+-- open tabs
 vim.keymap.set("n", "<leader>re", "<cmd>lua vim.diagnostic.open_float()<CR>")
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
-vim.keymap.set("n", "<esc>", ":noh<return><esc>")
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeOpen<CR>")
 
+-- buffers
+vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>")
+vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>")
+
+-- telescope find
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -->> image handling
 

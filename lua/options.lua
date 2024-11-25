@@ -6,10 +6,11 @@ vim.o.numberwidth = 3
 vim.o.undodir = "/home/kessel/.nvim/undo-dir"
 vim.o.undofile = true
 
-vim.opt.tabstop = 8
+vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 vim.opt.conceallevel = 2
 
 vim.g.vim_markdown_folding_disabled = 1
@@ -17,6 +18,7 @@ vim.g.vim_markdown_math = true
 
 vim.cmd([[se cursorline]])
 vim.cmd([[se cursorcolumn]])
+vim.cmd([[filetype plugin on]])
 
 vim.g.gruvbox_baby_telescope_theme = 1
 vim.g.gruvbox_baby_transparent_mode = 1
@@ -24,6 +26,14 @@ vim.g.gruvbox_baby_comment_style = "NONE"
 vim.g.gruvbox_baby_keyword_style = "NONE"
 
 vim.cmd([[colorscheme gruvbox-baby]])
+
+-- go to last line when opening file
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+	pattern = { "*" },
+	callback = function()
+		vim.api.nvim_exec('silent! normal! g`"zv', false)
+	end,
+})
 
 --vim.cmd([[colorscheme gruvbox]])
 

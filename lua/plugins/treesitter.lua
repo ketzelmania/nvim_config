@@ -15,5 +15,6 @@ return {
 
 	config = function()
 		vim.cmd([[TSEnable highlight]])
+		vim.cmd([[TSDisable indent]])
 	end,
 }
