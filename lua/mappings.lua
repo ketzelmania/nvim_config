@@ -1,6 +1,12 @@
 -- general
 vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("n", "<esc>", ":noh<return><esc>")
+vim.keymap.set("v", "<leader>/", "yq/p<cr>")
+vim.cmd([[nnoremap dm :execute 'delmarks '.nr2char(getchar())<cr>]])
+vim.keymap.set("n", "<leader>d", "<cmd>Neogen<cr>")
+vim.keymap.set({ "i", "s" }, "<C-L>", function()
+	require("luasnip").jump(1)
+end, { silent = true })
 
 -- remap registers
 vim.keymap.set("n", "d", '"_d')

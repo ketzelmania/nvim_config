@@ -1,0 +1,10 @@
+{
+  "sign": {
+    "prefix": "sign",
+    "body": ["/**", " * $0", " *", " * @author Gabriel Petitt", " */"]
+  },
+  "doc": {
+    "prefix": "doc",
+    "body": ["/**", " * $0", " */"]
+  }
+}

@@ -6,10 +6,12 @@ local servers = {
 	"ts_ls",
 	"html",
 	"cssls",
-	"clangd",
 	"lua_ls",
 	"luau_lsp",
 	"texlab",
+	"jdtls",
+	"zls",
+	"clangd",
 }
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -18,13 +20,14 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
--- pyright
---[[
-do
-	local capabilities = vim.lsp.protocol.make_client_capabilities()
-	capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
-	lspconfig.pyright.setup({
-		capabilities = capabilities,
-	})
-end
-]]
+-- rust with clippy
+lspconfig.rust_analyzer.setup({
+	capabilities = vim.lsp.protocol.make_client_capabilities(),
+	settings = {
+		["rust-analyzer"] = {
+			check = {
+				command = "clippy",
+			},
+		},
+	},
+})

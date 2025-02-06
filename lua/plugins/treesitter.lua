@@ -1,5 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	dependencies = {
+		"tadmccorkle/markdown.nvim",
+	},
 	opts = {
 		ensure_installed = {
 			"vim",
@@ -14,7 +17,25 @@ return {
 	event = "BufEnter",
 
 	config = function()
-		vim.cmd([[TSEnable highlight]])
-		vim.cmd([[TSDisable indent]])
+		require("nvim-treesitter.configs").setup({
+			ensure_installed = {
+				"markdown",
+				"markdown_inline", --[[ other parsers you need ]]
+				"rust",
+				"latex",
+			},
+			auto_install = true,
+			markdown = {
+				enable = true,
+				-- configuration here or nothing for defaults
+			},
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = true,
+			},
+			ident = {
+				enable = false,
+			},
+		})
 	end,
 }
