@@ -12,6 +12,7 @@ local servers = {
 	"jdtls",
 	"zls",
 	"clangd",
+	"gopls",
 }
 -- lsps with default config
 for _, lsp in ipairs(servers) do

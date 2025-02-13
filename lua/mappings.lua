@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>d", "<cmd>Neogen<cr>")
 vim.keymap.set({ "i", "s" }, "<C-L>", function()
 	require("luasnip").jump(1)
 end, { silent = true })
+vim.keymap.set("n", "<leader>bn", "<cmd>enew<cr>")
 
 -- remap registers
 vim.keymap.set("n", "d", '"_d')
