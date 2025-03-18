@@ -7,7 +7,7 @@ local servers = {
 	"html",
 	"cssls",
 	"lua_ls",
-	"luau_lsp",
+	--"luau_lsp",
 	"texlab",
 	"jdtls",
 	"zls",

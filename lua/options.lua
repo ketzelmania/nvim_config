@@ -80,19 +80,16 @@ local keywords = {
 	"directive.define",
 }
 
-vim.cmd([[hi clear @keyword]])
-vim.cmd([[hi link @keyword RedItalic]])
-
 for _, v in pairs(keywords) do
 	vim.cmd("hi clear @keyword." .. v)
-	vim.cmd("hi link @keyword." .. v .. " RedItalic")
+	vim.cmd("hi link @keyword." .. v .. " @keyword")
 end
-
-vim.cmd([[hi clear Conceal]])
-vim.cmd([[hi link Conceal Blue]])
-vim.cmd([[hi clear @markup.italic ]])
-vim.cmd([[hi link @markup.italic PurpleItalic ]])
-vim.cmd([[hi clear @markup.strong]])
-vim.cmd([[hi link @markup.strong YellowBold]])
-vim.cmd([[hi clear @constant]])
-vim.cmd([[hi link @constant PurpleBold]])
+--
+-- vim.cmd([[hi clear Conceal]])
+-- vim.cmd([[hi link Conceal Blue]])
+-- vim.cmd([[hi clear @markup.italic ]])
+-- vim.cmd([[hi link @markup.italic PurpleItalic ]])
+-- vim.cmd([[hi clear @markup.strong]])
+-- vim.cmd([[hi link @markup.strong YellowBold]])
+-- vim.cmd([[hi clear @constant]])
+-- vim.cmd([[hi link @constant PurpleBold]])
