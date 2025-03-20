@@ -18,6 +18,10 @@ return {
 					overwrite = true,
 					italic = true,
 				},
+				["@lsp.typemod.keyword.documentation"] = {
+					overwrite = true,
+					fg = "#789978",
+				},
 			},
 			tweak_background = {
 				normal = "none",
