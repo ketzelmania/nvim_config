@@ -1,5 +1,3 @@
-local home = "/home/met"
-
 return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
