@@ -23,6 +23,10 @@ vim.g.vim_markdown_folding_disabled = 1
 vim.g.vim_markdown_math = true
 vim.g.vim_markdown_new_list_item_indent = 0
 
+vim.g.java_ignore_markdown = 1
+
+vim.cmd([[autocmd! CursorHold * lua vim.diagnostic.config({ virtual_lines = { only_current_line = true } })]])
+
 vim.cmd([[filetype plugin on]])
 vim.opt_local.formatoptions:remove("t")
 
@@ -58,13 +62,10 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
---[[  GRUVBOX  ]]
+--[[  COLORS  ]]
 
--- vim.g.gruvbox_material_enable_bold = 1
--- vim.g.gruvbox_material_enable_italic = 1
--- vim.g.gruvbox_material_foreground = "mix"
---
--- vim.cmd([[colorscheme gruvbox-material]])
+--vim.cmd.colorscheme("lackluster-mint")
+vim.cmd([[colorscheme everforest]])
 
 local keywords = {
 	"debug",

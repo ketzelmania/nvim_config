@@ -12,18 +12,10 @@ return {
 			"css",
 			"python",
 			"java",
-		},
-	},
-	event = "BufEnter",
-
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = {
-				"markdown",
-				"markdown_inline", --[[ other parsers you need ]]
-				"rust",
-				"latex",
-			},
+			"markdown",
+			"markdown_inline", --[[ other parsers you need ]]
+			"rust",
+			"latex",
 			auto_install = true,
 			markdown = {
 				enable = true,
@@ -36,6 +28,7 @@ return {
 			ident = {
 				enable = false,
 			},
-		})
-	end,
+		},
+	},
+	event = "BufEnter",
 }
