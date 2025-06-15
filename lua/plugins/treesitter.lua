@@ -16,18 +16,19 @@ return {
 			"markdown_inline", --[[ other parsers you need ]]
 			"rust",
 			"latex",
-			auto_install = true,
-			markdown = {
-				enable = true,
-				-- configuration here or nothing for defaults
-			},
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = true,
-			},
-			ident = {
-				enable = false,
-			},
+		},
+
+		auto_install = true,
+		markdown = {
+			enable = true,
+			additional_vim_regex_highlighting = true,
+		},
+		highlight = {
+			enable = true,
+			additional_vim_regex_highlighting = true,
+		},
+		ident = {
+			enable = false,
 		},
 	},
 	event = "BufEnter",

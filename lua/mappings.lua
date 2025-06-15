@@ -30,7 +30,7 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- open tabs
 vim.keymap.set("n", "<leader>re", "<cmd>lua vim.diagnostic.open_float()<CR>")
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeOpen<CR>")
+vim.keymap.set("n", "<leader>lr", "<cmd>Telescope undo<CR>")
 
 -- buffers
 vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>")

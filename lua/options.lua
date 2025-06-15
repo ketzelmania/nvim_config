@@ -15,6 +15,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.textwidth = 80
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.conceallevel = 2
 vim.g.tex_conceal = "abdgm"
@@ -25,7 +27,7 @@ vim.g.vim_markdown_new_list_item_indent = 0
 
 vim.g.java_ignore_markdown = 1
 
-vim.cmd([[autocmd! CursorHold * lua vim.diagnostic.config({ virtual_lines = { only_current_line = true } })]])
+vim.diagnostic.config({ virtual_text = true, underline = true })
 
 vim.cmd([[filetype plugin on]])
 vim.opt_local.formatoptions:remove("t")
@@ -64,8 +66,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 --[[  COLORS  ]]
 
---vim.cmd.colorscheme("lackluster-mint")
-vim.cmd([[colorscheme everforest]])
+vim.cmd.colorscheme("lackluster-mint")
+--vim.cmd([[colorscheme everforest]])
 
 local keywords = {
 	"debug",
