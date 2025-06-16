@@ -124,7 +124,7 @@ return {
 				snippets = {
 					name = "Snippets",
 					module = "blink.cmp.sources.snippets",
-					score_offset = 5000,
+					score_offset = 3,
 					max_items = 3,
 
 					-- For `snippets.preset == 'luasnip'`
