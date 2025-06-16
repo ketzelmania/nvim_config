@@ -1,5 +1,3 @@
-local lspconfig = require("lspconfig")
-
 -- default config servers
 local servers = {
 	"pyright",
@@ -7,7 +5,6 @@ local servers = {
 	"html",
 	"cssls",
 	"lua_ls",
-	--"luau_lsp",
 	"texlab",
 	"jdtls",
 	"zls",
@@ -16,13 +13,30 @@ local servers = {
 }
 -- lsps with default config
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		capabilities = vim.lsp.protocol.make_client_capabilities(),
-	})
+	vim.lsp.enable(lsp)
 end
 
+vim.lsp.config("luau_lsp", {
+	cmd = { "luau-lsp", "lsp", "--definitions=~/globalTypes.d.lua" },
+	settings = {
+		platform = {
+			type = "roblox",
+		},
+		types = {
+			roblox_security_level = "PluginSecurity",
+			--definitionFiles = { "~/globalTypes.d.lua" },
+		},
+		sourcemap = {
+			enabled = true,
+			rojo_project_file = "default.project.json",
+			sourcemap_file = "sourcemap.json",
+		},
+	},
+})
+vim.lsp.enable("luau_lsp")
+
 -- rust with clippy
-lspconfig.rust_analyzer.setup({
+vim.lsp.config("rust_analyzer", {
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 	settings = {
 		["rust-analyzer"] = {
