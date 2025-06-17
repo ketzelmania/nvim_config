@@ -69,8 +69,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 --[[  COLORS  ]]
 
-vim.cmd.colorscheme("lackluster-mint")
---vim.cmd([[colorscheme everforest]])
+--vim.cmd.colorscheme("lackluster-mint")
+vim.cmd([[colorscheme everforest]])
 
 local keywords = {
 	"debug",
