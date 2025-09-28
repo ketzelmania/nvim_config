@@ -21,6 +21,7 @@ return {
 			"typescript",
 			"tsx",
 			"java",
+            "go",
 		},
 
 		auto_install = true,
@@ -52,6 +53,7 @@ return {
 			zindex = 20, -- The Z-index of the context window
 			on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
 		})
+        vim.cmd("TSEnable highlight")
 	end,
 	event = "BufEnter",
 }

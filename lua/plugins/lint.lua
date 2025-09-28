@@ -18,10 +18,7 @@ return {
 			java = { "checkstyle" },
 		}
 
-		lint.linters.checkstyle.args = {
-			"-c",
-			"/home/met/.local/share/nvim/checkstyle.xml",
-		}
+		lint.linters.checkstyle.config_file = vim.fn.expand("~/.local/share/nvim/checkstyle-grading.xml")
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
