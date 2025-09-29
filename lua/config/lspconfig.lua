@@ -10,6 +10,7 @@ local servers = {
 	"zls",
 	"clangd",
 	"gopls",
+	"cssls",
 }
 -- lsps with default config
 for _, lsp in ipairs(servers) do

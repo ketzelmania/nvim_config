@@ -39,6 +39,9 @@ return {
 					--args = '$FILENAME',
 					--append_args = { '--style="{IndentWidth: 4, ReflowComments: false}"' },
 				},
+				["prettier"] = {
+					prepend_args = { "--tab-width 2" },
+				},
 			},
 		})
 
