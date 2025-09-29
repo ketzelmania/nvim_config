@@ -30,16 +30,33 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- open tabs
 vim.keymap.set("n", "<leader>re", "<cmd>lua vim.diagnostic.open_float()<CR>")
 vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
-vim.keymap.set("n", "<leader>lr", "<cmd>Telescope undo<CR>")
 
 -- buffers
 vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>")
 vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>")
+vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>")
 
 -- telescope find
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+
+-- lsp config
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+vim.keymap.set("n", "ga", vim.lsp.buf.code_action)
+
+vim.keymap.set("n", "K", function()
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.3)
+
+	vim.lsp.buf.hover({
+		border = "single",
+		max_height = height,
+		max_width = width,
+	})
+end)
 
 -->> image handling
 
