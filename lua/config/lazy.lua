@@ -37,3 +37,4 @@ require("lazy").setup({
 require("options")
 require("mappings")
 require("config.lspconfig")
+require("config.quickfix")
