@@ -15,7 +15,7 @@ return {
 			"python",
 			"java",
 			"markdown",
-			"markdown_inline", --[[ other parsers you need ]]
+			"markdown_inline",
 			"rust",
 			"latex",
 			"typescript",

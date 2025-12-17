@@ -7,6 +7,7 @@ local servers = {
 	"lua_ls",
 	"texlab",
 	"jdtls",
+	"vtsls",
 	"zls",
 	"clangd",
 	"gopls",

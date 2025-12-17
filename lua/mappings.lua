@@ -59,7 +59,11 @@ vim.keymap.set("n", "K", function()
 	})
 end)
 
--->> image handling
+-- git hotkeys
+vim.keymap.set("n", "<leader>gcp", "<cmd>!git checkout HEAD~<CR>")
+vim.keymap.set("n", "<leader>gcm", "<cmd>!git checkout main<CR>")
+vim.keymap.set("n", "<leader>gss", "<cmd>!git stash<CR>")
+vim.keymap.set("n", "<leader>gsp", "<cmd>!git stash pop<CR>")
 
 -- paste image
 vim.keymap.set("n", "<leader>ip", "<cmd>PasteImage<CR>")
