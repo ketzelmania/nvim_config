@@ -38,9 +38,9 @@ vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>")
 vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>")
 
 -- telescope find
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+--vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+--vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
+--vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 
 -- lsp config
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
